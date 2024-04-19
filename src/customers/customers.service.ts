@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -35,6 +36,8 @@ export class CustomerService {
     const result = await this.customerRepository.delete(id);
     if (result.affected === 0) {
       throw new Error('Customer not found');
+    } else {
+      return result.raw;
     }
   }
 }
