@@ -1,5 +1,4 @@
 /* eslint-disable prettier/prettier */
-import { Employee } from 'src/employees/entities/employee.entity'; 
 import { Column, Entity, PrimaryGeneratedColumn} from 'typeorm';
 
 @Entity()

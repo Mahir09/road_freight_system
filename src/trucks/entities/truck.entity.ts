@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
-import { Trip } from 'src/trips/entities/trip.entity';
+// import { Trip } from 'src/trips/entities/trip.entity';
+import { Trip } from '../../trips/entities/trip.entity';
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 
 @Entity()

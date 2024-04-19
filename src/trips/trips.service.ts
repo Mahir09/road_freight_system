@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 // trip.service.ts
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -40,11 +41,18 @@ export class TripService {
     return this.tripRepository.save(trip);
   }
 
+  // async remove(id: number): Promise<void> {
+  //   const trip = await this.tripRepository.findOneBy({ id });
+  //   if (!trip) {
+  //     throw new Error('Trip not found');
+  //   }
+  //   await this.tripRepository.remove(trip);
+  // }
   async remove(id: number): Promise<void> {
-    const trip = await this.tripRepository.findOneBy({ id });
+    const trip = await this.tripRepository.findOne({ where: { id } });
     if (!trip) {
       throw new Error('Trip not found');
     }
     await this.tripRepository.remove(trip);
-  }
+  }  
 }

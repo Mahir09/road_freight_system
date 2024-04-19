@@ -14,8 +14,6 @@ export class TruckService {
     ) {}
 
     async findAll(): Promise<Truck[]> {
-        console.log("this.truckRepository");
-        console.log(this.truckRepository);
         try {
           return await this.truckRepository.find();
         } catch (error) {

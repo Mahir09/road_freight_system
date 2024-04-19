@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 // trip.entity.ts
-import { Driver } from 'src/drivers/entities/driver.entity';
-import { Shipment } from 'src/shipments/entities/shipment.entity';
-import { Truck } from 'src/trucks/entities/truck.entity';
+import { Driver } from '../../drivers/entities/driver.entity';
+import { Shipment } from '../../shipments/entities/shipment.entity';
+import { Truck } from '../../trucks/entities/truck.entity';
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, ManyToMany, JoinTable, OneToMany } from 'typeorm';
 
 @Entity()
